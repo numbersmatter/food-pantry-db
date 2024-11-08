@@ -1,5 +1,5 @@
 {
-	"name": "open-source-stack",
+	"name": "food-pantry-db",
 	"version": "1.0.0",
 	"description": "Minimal open-source stack to help you ship an open-source package in TS",
 	"main": "./dist/index.js",
@@ -44,10 +44,10 @@
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/forge42dev/open-source-stack.git"
+		"url": "git+https://github.com/numbersmatter/food-pantry-db.git"
 	},
 	"bugs": {
-		"url": "https://github.com/forge42dev/open-source-stack/issues"
+		"url": "https://github.com/numbersmatter/food-pantry-db/issues"
 	},
 	"files": [
 		"dist"
@@ -56,7 +56,7 @@
 		".",
 		"test-apps/*"
 	],
-	"homepage": "https://github.com/forge42dev/open-source-stack#readme",
+	"homepage": "https://github.com/numbersmatter/food-pantry-db#readme",
 	"devDependencies": {
 		"@arethetypeswrong/cli": "^0.15.4",
 		"@biomejs/biome": "^1.8.3",

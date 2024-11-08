@@ -1,5 +1,5 @@
 ---
-"open-source-stack": minor
+"food-pantry-db": minor
 ---
 
 Added changesets to the project
