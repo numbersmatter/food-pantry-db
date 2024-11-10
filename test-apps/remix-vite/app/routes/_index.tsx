@@ -1,6 +1,5 @@
 import type { MetaFunction } from "@remix-run/node";
 // Import and test your package
-import { test } from "food-pantry-db";
 
 export const meta: MetaFunction = () => {
   return [{ title: "New Remix App" }, { name: "description", content: "Welcome to Remix!" }];

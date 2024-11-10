@@ -1,7 +1,7 @@
 {
 	"name": "food-pantry-db",
 	"version": "1.0.0",
-	"description": "Minimal open-source stack to help you ship an open-source package in TS",
+	"description": "Food Pantry Database for nonprofits",
 	"main": "./dist/index.js",
 	"module": "./dist/index.mjs",
 	"types": "./dist/index.d.mts",
@@ -40,7 +40,7 @@
 		"check:exports": "attw --pack .",
 		"local-release": "changeset version && changeset publish"
 	},
-	"author": "",
+	"author": "Leonard Lawson",
 	"license": "MIT",
 	"repository": {
 		"type": "git",
@@ -49,13 +49,8 @@
 	"bugs": {
 		"url": "https://github.com/numbersmatter/food-pantry-db/issues"
 	},
-	"files": [
-		"dist"
-	],
-	"workspaces": [
-		".",
-		"test-apps/*"
-	],
+	"files": ["dist"],
+	"workspaces": [".", "test-apps/*"],
 	"homepage": "https://github.com/numbersmatter/food-pantry-db#readme",
 	"devDependencies": {
 		"@arethetypeswrong/cli": "^0.15.4",
@@ -68,7 +63,8 @@
 		"npm-run-all": "^4.1.5",
 		"tsup": "^8.0.2",
 		"typescript": "^5.4.5",
-		"vitest": "^1.5.2"
+		"vitest": "^1.5.2",
+		"zod": "^3.23.8"
 	},
 	"optionalDependencies": {
 		"@rollup/rollup-darwin-x64-gnu": "4.18.1",
@@ -82,5 +78,8 @@
 	},
 	"engines": {
 		"node": ">=20.0.0"
+	},
+	"dependencies": {
+		"firebase-admin": "^12.7.0"
 	}
 }

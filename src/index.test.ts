@@ -1,7 +1,7 @@
-import { test } from "."
+// import { } from "."
 
-describe("test", () => {
-	it("should work", () => {
-		expect(test()).toBeUndefined()
-	})
-})
+// describe("test", () => {
+// 	it("should work", () => {
+// 		expect(test()).toBeUndefined()
+// 	})
+// })

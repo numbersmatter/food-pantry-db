@@ -11,9 +11,10 @@ import { createReadableStreamFromReadable } from "@remix-run/node";
 import { RemixServer } from "@remix-run/react";
 import { isbot } from "isbot";
 import { renderToPipeableStream } from "react-dom/server";
+import { initEnvVariables } from "./lib/env-variables.server";
 
 const ABORT_DELAY = 5_000;
-
+initEnvVariables();
 export default function handleRequest(
   request: Request,
   responseStatusCode: number,
