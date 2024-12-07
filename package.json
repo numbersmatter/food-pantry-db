@@ -1,6 +1,6 @@
 {
 	"name": "food-pantry-db",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Food Pantry Database for nonprofits",
 	"main": "./dist/index.js",
 	"module": "./dist/index.mjs",
