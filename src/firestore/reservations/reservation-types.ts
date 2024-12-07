@@ -23,6 +23,7 @@ export interface ReservationDbModel {
 	userId: string
 	primaryContact: PrimaryContact
 	time: number
+	createdDate?: Timestamp
 }
 
 export interface CreateReservation {

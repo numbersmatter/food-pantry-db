@@ -26,7 +26,12 @@ const firestoreConverter: ReserveConverter = {
 		}
 	},
 	fromFirestore: (snapshot: QueryDocumentSnapshot<m.ReservationDbModel>) => {
-		const createdDate = snapshot.data().createdTimestamp ? snapshot.data().createdTimestamp.toDate() : new Date()
+		const createdDate = snapshot.data()?.createdDate
+			? //@ts-expect-error
+				snapshot
+					.data()
+					?.createdDate.toDate()
+			: snapshot.data().createdTimestamp.toDate()
 
 		const updatedDate = snapshot.data().updatedTimestamp ? snapshot.data().updatedTimestamp.toDate() : new Date()
 
@@ -100,8 +105,8 @@ export const reservationsDb = ({
 
 		const reservationData = {
 			id: reservationDocRef.id,
-			createdDate: FieldValue.serverTimestamp(),
-			updatedDate: FieldValue.serverTimestamp(),
+			createdTimestamp: FieldValue.serverTimestamp(),
+			updatedTimestamp: FieldValue.serverTimestamp(),
 			eventId: eventId,
 			status: "pending",
 			time: time,
