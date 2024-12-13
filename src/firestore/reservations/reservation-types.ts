@@ -1,6 +1,20 @@
 import type { Timestamp } from "firebase-admin/firestore"
 import type { PrimaryContact } from "../common-types"
 
+export type DeliveryStatuses = "waiting" | "family-error" | "staff-error" | "delivered"
+
+type DeliveryDetailsDate = {
+	status: DeliveryStatuses
+	deliveredDate: Date
+	staffId: string
+}
+
+type DeliveryDetailsTimestamp = {
+	deliveryTimestamp: Timestamp
+	status: DeliveryStatuses
+	staffId: string
+}
+
 export interface ReservationAppModel {
 	id: string
 	userId: string
@@ -11,6 +25,7 @@ export interface ReservationAppModel {
 	time: number
 	confirm: string
 	primaryContact: PrimaryContact
+	deliveryDetails?: DeliveryDetailsDate
 }
 
 export interface ReservationDbModel {
@@ -24,6 +39,7 @@ export interface ReservationDbModel {
 	primaryContact: PrimaryContact
 	time: number
 	createdDate?: Timestamp
+	deliveryDetails?: DeliveryDetailsTimestamp
 }
 
 export interface CreateReservation {

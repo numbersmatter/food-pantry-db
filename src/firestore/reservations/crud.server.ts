@@ -35,6 +35,18 @@ const firestoreConverter: ReserveConverter = {
 
 		const updatedDate = snapshot.data().updatedTimestamp ? snapshot.data().updatedTimestamp.toDate() : new Date()
 
+		const details = snapshot.data().deliveryDetails
+
+		const deliveredDate = details?.deliveryTimestamp.toDate()
+
+		const deliveryDetails = snapshot.data().deliveryDetails
+			? {
+					status: details?.status as m.DeliveryStatuses,
+					staffId: details?.staffId as string,
+					deliveredDate: deliveredDate as Date,
+				}
+			: undefined
+
 		return {
 			id: snapshot.id,
 			userId: snapshot.data().userId,
@@ -45,6 +57,7 @@ const firestoreConverter: ReserveConverter = {
 			time: snapshot.data().time,
 			confirm: snapshot.data().confirm,
 			primaryContact: snapshot.data().primaryContact,
+			deliveryDetails,
 		}
 	},
 }
