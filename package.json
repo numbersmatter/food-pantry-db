@@ -1,6 +1,6 @@
 {
 	"name": "food-pantry-db",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Food Pantry Database for nonprofits",
 	"main": "./dist/index.js",
 	"module": "./dist/index.mjs",
@@ -38,7 +38,8 @@
 		"typecheck": "tsc",
 		"validate": "npm run check && npm run tsc && npm run test",
 		"check:exports": "attw --pack .",
-		"local-release": "changeset version && changeset publish"
+		"local-release": "changeset version && changeset publish",
+		"prepare": "tsc"
 	},
 	"author": "Leonard Lawson",
 	"license": "MIT",
